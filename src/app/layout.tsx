@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "Courtney Beka Portfolio",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/img/general/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Courtney Beka Portfolio"
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Courtney Beka | UX/UI Designer & Brand Strategist",
     description: "Professional portfolio of Courtney Beka, featuring UX/UI design, branding, and creative work.",
-    images: ["/og-image.jpg"],
+    images: ["/img/general/og-image.jpg"],
   },
   robots: {
     index: true,

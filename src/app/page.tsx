@@ -44,19 +44,19 @@ export default function Home() {
     {
       title: "Brand Identity: Elevate Wellness",
       category: "Branding",
-      image: "/project1.jpg",
+      image: "/img/projects/elevate-wellness/thumbnail.jpg",
       slug: "/projects/elevate-wellness"
     },
     {
       title: "UX/UI: Finance Dashboard",
       category: "UX/UI Design",
-      image: "/project2.jpg", 
+      image: "/img/projects/finance-dashboard/thumbnail.jpg", 
       slug: "/projects/finance-dashboard"
     },
     {
       title: "E-Commerce Redesign",
       category: "Web Design",
-      image: "/project3.jpg",
+      image: "/img/projects/ecommerce-redesign/thumbnail.jpg",
       slug: "/projects/ecommerce-redesign"
     }
   ];
@@ -142,7 +142,7 @@ export default function Home() {
             >
               <div className="relative h-80 w-full overflow-hidden rounded-lg">
                 <Image
-                  src="/profile.jpg"
+                  src="/img/general/profile.jpeg"
                   alt="Courtney Beka"
                   fill
                   style={{ objectFit: "cover" }}

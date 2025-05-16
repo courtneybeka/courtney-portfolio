@@ -1,12 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['images.unsplash.com', 'source.unsplash.com'],
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '**',
+        hostname: 'images.unsplash.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'source.unsplash.com',
+      },
+      // If you still need the wildcard for other domains, you can add it back:
+      // {
+      //   protocol: 'https',
+      //   hostname: '**',
+      // },
     ],
   },
 };

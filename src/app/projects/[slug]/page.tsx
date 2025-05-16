@@ -43,8 +43,8 @@ const projectsData: Record<string, Project> = {
     client: 'FinTech Startup',
     year: '2022',
     role: 'Lead UX/UI Designer',
-    coverImage: '/project1.jpg',
-    images: ['/project1.jpg', '/project1-detail-1.jpg', '/project1-detail-2.jpg'],
+    coverImage: '/img/projects/finance-dashboard/thumbnail.jpg',
+    images: ['/img/projects/finance-dashboard/thumbnail.jpg', '/img/projects/finance-dashboard/detail-1.jpg', '/img/projects/finance-dashboard/detail-2.jpg'],
     nextProject: {
       title: 'Elevate Wellness Brand',
       slug: '/projects/elevate-wellness'
@@ -63,8 +63,8 @@ const projectsData: Record<string, Project> = {
     client: 'Elevate Wellness',
     year: '2022',
     role: 'Brand Strategist & Designer',
-    coverImage: '/project2.jpg',
-    images: ['/project2.jpg', '/project2-detail-1.jpg', '/project2-detail-2.jpg'],
+    coverImage: '/img/projects/elevate-wellness/thumbnail.jpg',
+    images: ['/img/projects/elevate-wellness/thumbnail.jpg', '/img/projects/elevate-wellness/detail-1.jpg', '/img/projects/elevate-wellness/detail-2.jpg'],
     nextProject: {
       title: 'E-Commerce Platform',
       slug: '/projects/ecommerce-redesign'
@@ -83,8 +83,8 @@ const projectsData: Record<string, Project> = {
     client: 'Fashion Retailer',
     year: '2021',
     role: 'UX Designer',
-    coverImage: '/project3.jpg',
-    images: ['/project3.jpg', '/project3-detail-1.jpg', '/project3-detail-2.jpg'],
+    coverImage: '/img/projects/ecommerce-redesign/thumbnail.jpg',
+    images: ['/img/projects/ecommerce-redesign/thumbnail.jpg', '/img/projects/ecommerce-redesign/detail-1.jpg', '/img/projects/ecommerce-redesign/detail-2.jpg'],
     nextProject: {
       title: 'Health Tracking App',
       slug: '/projects/health-app'
@@ -103,8 +103,8 @@ const projectsData: Record<string, Project> = {
     client: 'Health Tech Company',
     year: '2021',
     role: 'Mobile UI/UX Designer',
-    coverImage: '/project4.jpg',
-    images: ['/project4.jpg', '/project4-detail-1.jpg', '/project4-detail-2.jpg'],
+    coverImage: '/img/projects/health-app/thumbnail.jpg',
+    images: ['/img/projects/health-app/thumbnail.jpg', '/img/projects/health-app/detail-1.jpg', '/img/projects/health-app/detail-2.jpg'],
     nextProject: {
       title: 'Creative Agency Rebrand',
       slug: '/projects/agency-rebrand'
@@ -123,8 +123,8 @@ const projectsData: Record<string, Project> = {
     client: 'Digital Creative Agency',
     year: '2020',
     role: 'Brand Designer',
-    coverImage: '/project5.jpg',
-    images: ['/project5.jpg', '/project5-detail-1.jpg', '/project5-detail-2.jpg'],
+    coverImage: '/img/projects/agency-rebrand/thumbnail.jpg',
+    images: ['/img/projects/agency-rebrand/thumbnail.jpg', '/img/projects/agency-rebrand/detail-1.jpg', '/img/projects/agency-rebrand/detail-2.jpg'],
     nextProject: {
       title: 'Meditation App UI',
       slug: '/projects/meditation-app'
@@ -143,8 +143,8 @@ const projectsData: Record<string, Project> = {
     client: 'Wellness Tech Startup',
     year: '2020',
     role: 'Lead UI Designer',
-    coverImage: '/project6.jpg',
-    images: ['/project6.jpg', '/project6-detail-1.jpg', '/project6-detail-2.jpg'],
+    coverImage: '/img/projects/meditation-app/thumbnail.jpg',
+    images: ['/img/projects/meditation-app/thumbnail.jpg', '/img/projects/meditation-app/detail-1.jpg', '/img/projects/meditation-app/detail-2.jpg'],
     nextProject: {
       title: 'Finance Dashboard UI',
       slug: '/projects/finance-dashboard'

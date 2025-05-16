@@ -29,7 +29,7 @@ export default function Projects() {
       title: 'Finance Dashboard UI',
       description: 'Modern finance dashboard with data visualization and user-friendly interface',
       category: 'UX/UI',
-      image: '/project1.jpg',
+      image: '/img/projects/finance-dashboard/thumbnail.jpg',
       slug: '/projects/finance-dashboard'
     },
     {
@@ -37,7 +37,7 @@ export default function Projects() {
       title: 'Elevate Wellness Brand',
       description: 'Brand identity design for a premium wellness company',
       category: 'Branding',
-      image: '/project2.jpg',
+      image: '/img/projects/elevate-wellness/thumbnail.jpg',
       slug: '/projects/elevate-wellness'
     },
     {
@@ -45,7 +45,7 @@ export default function Projects() {
       title: 'E-Commerce Platform',
       description: 'Complete redesign of an e-commerce website with improved UX',
       category: 'Web Design',
-      image: '/project3.jpg',
+      image: '/img/projects/ecommerce-redesign/thumbnail.jpg',
       slug: '/projects/ecommerce-redesign'
     },
     {
@@ -53,7 +53,7 @@ export default function Projects() {
       title: 'Health Tracking App',
       description: 'Mobile app design for tracking fitness and wellness metrics',
       category: 'Mobile Apps',
-      image: '/project4.jpg',
+      image: '/img/projects/health-app/thumbnail.jpg',
       slug: '/projects/health-app'
     },
     {
@@ -61,7 +61,7 @@ export default function Projects() {
       title: 'Creative Agency Rebrand',
       description: 'Complete rebrand for a digital creative agency',
       category: 'Branding',
-      image: '/project5.jpg',
+      image: '/img/projects/agency-rebrand/thumbnail.jpg',
       slug: '/projects/agency-rebrand'
     },
     {
@@ -69,7 +69,7 @@ export default function Projects() {
       title: 'Meditation App UI',
       description: 'Calming and intuitive interface for a meditation app',
       category: 'UX/UI',
-      image: '/project6.jpg',
+      image: '/img/projects/meditation-app/thumbnail.jpg',
       slug: '/projects/meditation-app'
     },
   ];
