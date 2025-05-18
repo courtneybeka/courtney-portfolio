@@ -115,13 +115,13 @@ export default function Home() {
       {/* About/Introduction Section */}
       <section ref={ref} className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-6">
-          <motion.div 
+          <motion.div
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
             variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+            className="grid grid-cols-1 gap-12 justify-items-center"
           >
-            <motion.div variants={fadeInUp} className="order-2 md:order-1">
+            <motion.div variants={fadeInUp} className="max-w-2xl text-center md:text-left">
               <h2 className="text-3xl font-bold mb-6">Hi, I'm Courtney!</h2>
               <p className="text-xl mb-6 text-gray-600 dark:text-gray-300">
                 I'm a UX/UI designer and brand strategist with a passion for creating aesthetic, user-friendly digital experiences.
@@ -129,26 +129,12 @@ export default function Home() {
               <p className="mb-8 text-gray-600 dark:text-gray-300">
                 My approach combines creativity with strategic thinking to deliver designs that are not only visually captivating but also functional and intuitive.
               </p>
-              <Link href="/about" className="text-purple-600 font-medium hover:text-purple-800 transition-colors duration-300 flex items-center">
+              <Link href="/about" className="text-purple-600 font-medium hover:text-purple-800 transition-colors duration-300 flex items-center justify-center md:justify-start">
                 More About Me
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                 </svg>
               </Link>
-            </motion.div>
-            <motion.div 
-              variants={fadeInUp}
-              className="order-1 md:order-2 bg-white dark:bg-gray-800 p-1 rounded-lg shadow-xl"
-            >
-              <div className="relative h-80 w-full overflow-hidden rounded-lg">
-                <Image
-                  src="/img/general/profile.jpeg"
-                  alt="Courtney Beka"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg transition-transform duration-500 hover:scale-105"
-                />
-              </div>
             </motion.div>
           </motion.div>
         </div>
