@@ -247,8 +247,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-medium mb-1">Email</h3>
-                    <a href="mailto:hello@courtneybeka.com" className="text-teal-600 hover:underline">
-                      hello@courtneybeka.com
+                    <a href="mailto:courtneybekadesigns@gmail.com" className="text-teal-600 hover:underline">
+                      courtneybekadesigns@gmail.com
                     </a>
                   </div>
                 </div>

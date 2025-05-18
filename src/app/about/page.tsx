@@ -60,6 +60,11 @@ export default function About() {
             <motion.p variants={fadeInUp} className="mb-8 text-gray-600 dark:text-gray-400">
               Driven by a passion for user-centered design and creative problem-solving, I specialize in transforming complex challenges into elegant, accessible solutions. My approach combines strategic thinking with a keen eye for detail, ensuring every design is not only visually compelling but also highly functional and aligned with user needs and business goals.
             </motion.p>
+            <motion.p variants={fadeInUp} className="mb-8">
+              <a href="mailto:courtneybekadesigns@gmail.com" className="text-purple-600 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300 font-medium transition-colors duration-300">
+                courtneybekadesigns@gmail.com
+              </a>
+            </motion.p>
             <motion.div variants={fadeInUp} className="flex gap-4 justify-center">
               <Link href="/contact" className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full font-medium transition-colors duration-300">
                 Get In Touch
