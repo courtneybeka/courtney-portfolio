@@ -163,7 +163,7 @@ const projectsData: Record<string, Project> = {
     client: 'Edmonton International Film Festival (Conceptual)',
     year: '2023',
     role: 'Brand Designer & UI/UX Conceptualist',
-    coverImage: '/img/projects/eiff-brand-elevation/thumbnail.jpg',
+    coverImage: '/img/projects/eiff-brand-elevation/detail-2.jpg',
     images: ['/img/projects/eiff-brand-elevation/thumbnail.jpg', '/img/projects/eiff-brand-elevation/detail-1.jpg', '/img/projects/eiff-brand-elevation/detail-2.jpg'],
     nextProject: {
       title: 'Finance Dashboard UI',
@@ -311,7 +311,7 @@ export default function ProjectDetail({
                     src={image}
                     alt={`${project.title} - Image ${i+1}`}
                     fill
-                    style={{ objectFit: "cover" }}
+                    style={{ objectFit: image === '/img/projects/eiff-brand-elevation/thumbnail.jpg' && slug === 'eiff-brand-elevation' ? "contain" : "cover" }}
                     className="transition-transform duration-500 hover:scale-105"
                   />
                 </div>

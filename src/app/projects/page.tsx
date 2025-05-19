@@ -77,7 +77,7 @@ export default function Projects() {
       title: 'EIFF Brand Elevation',
       description: 'Complete brand elevation for the Edmonton International Film Festival, including logo, poster, ticket, and website concepts.',
       category: 'Branding',
-      image: '/img/projects/eiff-brand-elevation/thumbnail.jpg',
+      image: '/img/projects/eiff-brand-elevation/detail-2.jpg',
       slug: '/projects/eiff-brand-elevation'
     },
   ];
