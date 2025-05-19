@@ -166,7 +166,26 @@ const projectsData: Record<string, Project> = {
     coverImage: '/img/projects/eiff-brand-elevation/detail-2.jpg',
     images: ['/img/projects/eiff-brand-elevation/thumbnail.jpg', '/img/projects/eiff-brand-elevation/detail-1.jpg', '/img/projects/eiff-brand-elevation/detail-2.jpg'],
     nextProject: {
-      title: 'Finance Dashboard UI',
+      title: 'HURDE Logo',
+      slug: '/projects/hurde-logo'
+    }
+  },
+  'hurde-logo': {
+    id: '8',
+    title: 'HURDE Logo',
+    description: 'Logo design for MacEwan University\'s Human Rights, Diversity, and Equity (HURDE) club.',
+    fullDescription: [
+      'As the Design Executive for the Human Rights, Diversity, and Equity (HURDE) club at MacEwan University, I was responsible for creating a distinct and meaningful logo.',
+      'The design aimed to represent the core values of the club, emphasizing inclusivity, support, and the diverse voices within the university community dedicated to human rights causes.'
+    ],
+    category: 'Branding',
+    client: 'HURDE Club - MacEwan University',
+    year: '2023', // Assuming a recent year, please correct if needed
+    role: 'Design Executive',
+    coverImage: '/img/projects/hurde-logo/hurde.jpg',
+    images: ['/img/projects/hurde-logo/hurde.jpg'], // Only one image for now
+    nextProject: {
+      title: 'Finance Dashboard UI', // Or the first project in your list
       slug: '/projects/finance-dashboard'
     }
   }

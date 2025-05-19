@@ -80,6 +80,14 @@ export default function Projects() {
       image: '/img/projects/eiff-brand-elevation/detail-2.jpg',
       slug: '/projects/eiff-brand-elevation'
     },
+    {
+      id: '8',
+      title: 'HURDE Logo',
+      description: 'Logo design for MacEwan University\'s Human Rights, Diversity, and Equity (HURDE) club.',
+      category: 'Branding',
+      image: '/img/projects/hurde-logo/hurde.jpg',
+      slug: '/projects/hurde-logo'
+    },
   ];
   
   // Filter projects based on active category
