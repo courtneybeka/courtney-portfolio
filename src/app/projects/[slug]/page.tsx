@@ -146,6 +146,26 @@ const projectsData: Record<string, Project> = {
     coverImage: '/img/projects/meditation-app/thumbnail.jpg',
     images: ['/img/projects/meditation-app/thumbnail.jpg', '/img/projects/meditation-app/detail-1.jpg', '/img/projects/meditation-app/detail-2.jpg'],
     nextProject: {
+      title: 'EIFF Brand Elevation',
+      slug: '/projects/eiff-brand-elevation'
+    }
+  },
+  'eiff-brand-elevation': {
+    id: '7',
+    title: 'EIFF Brand Elevation',
+    description: 'Complete brand elevation for the Edmonton International Film Festival, including logo redesign, poster, ticket, and website homepage concepts.',
+    fullDescription: [
+      'Tasked with modernizing the brand for the Edmonton International Film Festival (EIFF) to attract a broader audience while honoring its legacy.',
+      'Developed a new dynamic logo, a visually striking poster design, updated ticket layouts, and a concept for a more engaging and user-friendly website homepage.',
+      'The refreshed branding aimed to convey the excitement and diversity of the film festival experience.'
+    ],
+    category: 'Branding',
+    client: 'Edmonton International Film Festival (Conceptual)',
+    year: '2023',
+    role: 'Brand Designer & UI/UX Conceptualist',
+    coverImage: '/img/projects/eiff-brand-elevation/thumbnail.jpg',
+    images: ['/img/projects/eiff-brand-elevation/thumbnail.jpg', '/img/projects/eiff-brand-elevation/detail-1.jpg', '/img/projects/eiff-brand-elevation/detail-2.jpg'],
+    nextProject: {
       title: 'Finance Dashboard UI',
       slug: '/projects/finance-dashboard'
     }
