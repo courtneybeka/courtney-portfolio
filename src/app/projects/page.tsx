@@ -96,6 +96,14 @@ export default function Projects() {
       image: '/img/projects/fort-edmonton-park/thumbnail.png',
       slug: '/projects/fort-edmonton-park'
     },
+    {
+      id: '10',
+      title: 'Insight HR UX/UI Case Study',
+      description: 'A comprehensive UX/UI case study for an HR management platform, including research, wireframing, prototyping, and final designs.',
+      category: 'UX/UI',
+      image: '/img/projects/insight-hr-ux/placeholder-thumbnail.jpg',
+      slug: '/projects/insight-hr-ux'
+    },
   ];
   
   // Filter projects based on active category

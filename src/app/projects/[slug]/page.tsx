@@ -185,8 +185,8 @@ const projectsData: Record<string, Project> = {
     coverImage: '/img/projects/hurde-logo/hurde.jpg',
     images: ['/img/projects/hurde-logo/hurde.jpg'], // Only one image for now
     nextProject: {
-      title: 'Finance Dashboard UI', // Or the first project in your list
-      slug: '/projects/finance-dashboard'
+      title: 'Insight HR UX/UI Case Study', // Correct: HURDE points to the new Insight HR project
+      slug: '/projects/insight-hr-ux'
     }
   },
   'fort-edmonton-park': {
@@ -198,20 +198,47 @@ const projectsData: Record<string, Project> = {
       'Responsibilities included redesigning the Johnson\'s Cafe menu for enhanced readability and visual appeal (showcasing the completed "after" version).',
       'Developed a series of engaging social media posts for various campaigns and announcements, including content formatted for vertical story displays.',
       'Created professional email signatures to ensure brand consistency across communications.',
-      'Designed a set of informational and visually appealing pony cards for visitor engagement.'
+      'Designed whimsical "pony express" themed pony cards for children visiting the park, adding to the immersive historical experience.'
     ],
     category: 'Branding',
     client: 'Fort Edmonton Park',
-    year: '2023-2024', // Please confirm or update this year
-    role: 'Graphic Designer', // Please confirm or update this role
+    year: '2022-2023',
+    role: 'Graphic Designer (Contract)',
     coverImage: '/img/projects/fort-edmonton-park/thumbnail.png',
     images: [
-      '/img/projects/fort-edmonton-park/detail-menu.jpg',
-      '/img/projects/fort-edmonton-park/detail-email-signature.png',
-      '/img/projects/fort-edmonton-park/detail-ponycard.jpg'
+      '/img/projects/fort-edmonton-park/thumbnail.png',
+      '/img/projects/fort-edmonton-park/menu-after.jpg',
+      '/img/projects/fort-edmonton-park/social-post-1.jpg',
+      '/img/projects/fort-edmonton-park/social-story-1.jpg',
+      '/img/projects/fort-edmonton-park/pony-card.jpg'
+    ],
+    nextProject: { // Correct: Fort Edmonton Park (previously last) now points to Finance Dashboard
+      title: 'Finance Dashboard UI',
+      slug: '/projects/finance-dashboard'
+    }
+  },
+  'insight-hr-ux': { // New project
+    id: '10',
+    title: 'Insight HR UX/UI Case Study',
+    description: 'A comprehensive UX/UI case study for an HR management platform.',
+    fullDescription: [
+      'This project was a deep dive into creating an intuitive and efficient user experience for an HR management platform, "Insight HR". The goal was to streamline common HR tasks, improve data accessibility, and create a user-friendly interface for HR professionals and employees.',
+      'The process involved extensive user research, including surveys and interviews with HR personnel to understand their pain points and needs. This was followed by creating user personas and journey maps.',
+      'I then developed wireframes and interactive prototypes, focusing on clear navigation, efficient workflows for tasks like onboarding, payroll, and performance reviews, and data visualization for HR analytics. Usability testing was conducted at various stages to refine the design.',
+      'The final deliverables included high-fidelity mockups, a comprehensive style guide, and the detailed UX case study report and video presentation which you can find linked below.'
+    ],
+    category: 'UX/UI',
+    client: 'Conceptual (Course Project)',
+    year: '2023',
+    role: 'UX/UI Designer',
+    coverImage: '/img/projects/insight-hr-ux/placeholder-thumbnail.jpg', // Placeholder
+    images: [
+      '/img/projects/insight-hr-ux/placeholder-detail-1.jpg', // Placeholder
+      '/img/projects/insight-hr-ux/placeholder-detail-2.jpg', // Placeholder
+      '/img/projects/insight-hr-ux/placeholder-detail-3.jpg'  // Placeholder
     ],
     nextProject: {
-      title: 'Finance Dashboard UI', // Loops back to the first project
+      title: 'Finance Dashboard UI', // Correct: New last project Insight HR points to the first project
       slug: '/projects/finance-dashboard'
     }
   }
