@@ -188,6 +188,33 @@ const projectsData: Record<string, Project> = {
       title: 'Finance Dashboard UI', // Or the first project in your list
       slug: '/projects/finance-dashboard'
     }
+  },
+  'fort-edmonton-park': {
+    id: '9',
+    title: 'Fort Edmonton Park Design Work',
+    description: 'Diverse graphic design assets for Fort Edmonton Park, including menus, social media, email signatures, and pony cards.',
+    fullDescription: [
+      'Undertook a variety of graphic design tasks for Fort Edmonton Park, a prominent historical attraction.',
+      'Responsibilities included redesigning the Johnson\'s Cafe menu for enhanced readability and visual appeal (showcasing the completed "after" version).',
+      'Developed a series of engaging social media posts for various campaigns and announcements, including content formatted for vertical story displays.',
+      'Created professional email signatures to ensure brand consistency across communications.',
+      'Designed a set of informational and visually appealing pony cards for visitor engagement.'
+    ],
+    category: 'Branding',
+    client: 'Fort Edmonton Park',
+    year: '2023-2024', // Please confirm or update this year
+    role: 'Graphic Designer', // Please confirm or update this role
+    coverImage: '/img/projects/fort-edmonton-park/thumbnail.png',
+    images: [
+      '/img/projects/fort-edmonton-park/detail-menu.jpg',
+      '/img/projects/fort-edmonton-park/detail-social-story.png',
+      '/img/projects/fort-edmonton-park/detail-email-signature.png',
+      '/img/projects/fort-edmonton-park/detail-ponycard.jpg'
+    ],
+    nextProject: {
+      title: 'Finance Dashboard UI', // Loops back to the first project
+      slug: '/projects/finance-dashboard'
+    }
   }
 };
 
@@ -330,7 +357,7 @@ export default function ProjectDetail({
                     src={image}
                     alt={`${project.title} - Image ${i+1}`}
                     fill
-                    style={{ objectFit: image === '/img/projects/eiff-brand-elevation/thumbnail.jpg' && slug === 'eiff-brand-elevation' ? "contain" : "cover" }}
+                    style={{ objectFit: slug === 'eiff-brand-elevation' && image.includes('thumbnail.jpg') ? 'contain' : (slug === 'fort-edmonton-park' ? 'contain' : 'cover') }}
                     className="transition-transform duration-500 hover:scale-105"
                   />
                 </div>

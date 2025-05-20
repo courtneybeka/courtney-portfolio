@@ -88,6 +88,14 @@ export default function Projects() {
       image: '/img/projects/hurde-logo/hurde.jpg',
       slug: '/projects/hurde-logo'
     },
+    {
+      id: '9',
+      title: 'Fort Edmonton Park Design Work',
+      description: 'Diverse graphic design assets for Fort Edmonton Park, including menus, social media, email signatures, and pony cards.',
+      category: 'Branding',
+      image: '/img/projects/fort-edmonton-park/thumbnail.png',
+      slug: '/projects/fort-edmonton-park'
+    },
   ];
   
   // Filter projects based on active category
