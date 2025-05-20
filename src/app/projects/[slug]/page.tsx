@@ -207,7 +207,6 @@ const projectsData: Record<string, Project> = {
     coverImage: '/img/projects/fort-edmonton-park/thumbnail.png',
     images: [
       '/img/projects/fort-edmonton-park/detail-menu.jpg',
-      '/img/projects/fort-edmonton-park/detail-social-story.png',
       '/img/projects/fort-edmonton-park/detail-email-signature.png',
       '/img/projects/fort-edmonton-park/detail-ponycard.jpg'
     ],
