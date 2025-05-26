@@ -39,12 +39,14 @@ const projectsData: { [key: string]: Project } = {
     client: 'Edmonton International Film Festival (Conceptual)',
     year: '2023',
     role: 'Brand Designer & UI/UX Conceptualist',
-    coverImage: '/img/projects/eiff-brand-elevation/thumbnail.jpg',
+    coverImage: '/img/projects/eiff-brand-elevation/eiff_logo.jpg',
     images: [
+      '/img/projects/eiff-brand-elevation/eiff_logo.jpg',
+      '/img/projects/eiff-brand-elevation/eiff_ticket.jpg',
       '/img/projects/eiff-brand-elevation/detail-1.jpg',
       '/img/projects/eiff-brand-elevation/detail-2.jpg',
       '<iframe width="560" height="315" src="https://www.youtube.com/embed/zVFYeGucm50?si=KQRYX67aWjm0cRGr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
-      '/img/projects/eiff-brand-elevation/DESN311_P3_Process_BekaCourtney.pdf'
+      '<iframe src="/img/projects/eiff-brand-elevation/DESN311_P3_Process_BekaCourtney.pdf" width="100%" height="600px" style="border:none;">This browser does not support PDFs. Please download the PDF to view it: <a href="/img/projects/eiff-brand-elevation/DESN311_P3_Process_BekaCourtney.pdf">Download PDF</a>.</iframe>'
     ],
     nextProject: {
       title: 'Insight HR UX',
@@ -60,10 +62,15 @@ const projectsData: { [key: string]: Project } = {
     client: 'Insight HR (Conceptual)',
     year: '2023',
     role: 'UX/UI Designer',
-    coverImage: '/img/projects/insight-hr-ux/thumbnail.jpg',
+    coverImage: '/img/projects/insight-hr-ux/InsightHr1.png',
     images: [
-      '/img/projects/insight-hr-ux/final-report.pdf',
-      'https://youtu.be/zVFYeGucm50?si=dOtUgGEyLkH8L63z'
+      '/img/projects/insight-hr-ux/InsightHr1.png',
+      '/img/projects/insight-hr-ux/InsightHr2.png',
+      '/img/projects/insight-hr-ux/InsightHr3.png',
+      '/img/projects/insight-hr-ux/InsightHr4.png',
+      '/img/projects/insight-hr-ux/InsightHr5.png',
+      '/img/projects/insight-hr-ux/InsightHr6.png',
+      '<iframe width="560" height="315" src="https://www.youtube.com/embed/ZIX_-B2-Tdc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
     ],
     nextProject: {
       title: 'Buffalo Lodge',
@@ -239,9 +246,9 @@ export default function ProjectDetail({
             </div>
             
             {/* Project Images */}
-            <div ref={imagesRef} className="project-images space-y-8">
+            <div ref={imagesRef} className={`project-images ${slug === 'insight-hr-ux' ? 'flex flex-wrap gap-4' : 'space-y-8'}`}>
               {project.images.map((image, i) => (
-                <div key={i} className="project-image relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+                <div key={i} className={slug === 'insight-hr-ux' ? 'relative w-80 aspect-[16/10] rounded-xl overflow-hidden shadow-lg' : 'project-image relative w-full aspect-video rounded-xl overflow-hidden shadow-lg'}>
                   {image.startsWith('<iframe') ? (
                     <div dangerouslySetInnerHTML={{ __html: image }} className="w-full h-full" />
                   ) : (
@@ -249,7 +256,7 @@ export default function ProjectDetail({
                       src={image}
                       alt={`${project.title} - Image ${i+1}`}
                       fill
-                      style={{ objectFit: slug === 'eiff-brand-elevation' && image.includes('thumbnail.jpg') ? 'contain' : (slug === 'fort-edmonton-park' ? 'contain' : 'cover') }}
+                      style={{ objectFit: slug === 'eiff-brand-elevation' && image.includes('eiff_logo.jpg') ? 'contain' : (slug === 'fort-edmonton-park' ? 'contain' : 'cover') }}
                       className="transition-transform duration-500 hover:scale-105"
                     />
                   )}
