@@ -47,6 +47,14 @@ export default function Projects() {
       category: 'Branding',
       image: '/img/projects/buffalo-lodge/thumbnail.jpg',
       slug: '/projects/buffalo-lodge'
+    },
+    {
+      id: '4',
+      title: 'Fort Edmonton Park',
+      description: 'Diverse graphic design assets for Fort Edmonton Park, including menus, social media, email signatures, and pony cards.',
+      category: 'Branding',
+      image: '/img/projects/fort-edmonton-park/thumbnail.png',
+      slug: '/projects/fort-edmonton-park'
     }
   ];
   

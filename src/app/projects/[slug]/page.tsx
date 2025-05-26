@@ -92,6 +92,28 @@ const projectsData: { [key: string]: Project } = {
       '/img/projects/buffalo-lodge/detail-3.jpg'
     ],
     nextProject: {
+      title: 'Fort Edmonton Park',
+      slug: '/projects/fort-edmonton-park'
+    }
+  },
+  'fort-edmonton-park': {
+    id: '4',
+    title: 'Fort Edmonton Park',
+    description: 'Diverse graphic design assets for Fort Edmonton Park, including menus, social media, email signatures, and pony cards.',
+    fullDescription: 'Undertook a variety of graphic design tasks for Fort Edmonton Park, a prominent historical attraction. Responsibilities included redesigning the Johnson\'s Cafe menu for enhanced readability and visual appeal, developing engaging social media posts for various campaigns and announcements, creating professional email signatures to ensure brand consistency across communications, and designing whimsical "pony express" themed pony cards for children visiting the park, adding to the immersive historical experience.',
+    category: 'Branding',
+    client: 'Fort Edmonton Park',
+    year: '2022-2023',
+    role: 'Graphic Designer (Contract)',
+    coverImage: '/img/projects/fort-edmonton-park/thumbnail.png',
+    images: [
+      '/img/projects/fort-edmonton-park/thumbnail.png',
+      '/img/projects/fort-edmonton-park/menu-after.jpg',
+      '/img/projects/fort-edmonton-park/social-post-1.jpg',
+      '/img/projects/fort-edmonton-park/social-story-1.jpg',
+      '/img/projects/fort-edmonton-park/pony-card.jpg'
+    ],
+    nextProject: {
       title: 'EIFF Brand Elevation',
       slug: '/projects/eiff-brand-elevation'
     }
