@@ -67,8 +67,7 @@ const projectsData: { [key: string]: Project } = {
       '/img/projects/insight-hr-ux/final-website-05.jpg',
       '/img/projects/insight-hr-ux/final-website-06.jpg',
       '/img/projects/insight-hr-ux/final-website-07.jpg',
-      '/img/projects/insight-hr-ux/final-report.pdf',
-      '/img/projects/insight-hr-ux/final-video.mp4'
+      '/img/projects/insight-hr-ux/final-report.pdf'
     ],
     nextProject: {
       title: 'Buffalo Lodge',
