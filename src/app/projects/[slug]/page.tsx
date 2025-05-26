@@ -43,7 +43,7 @@ const projectsData: { [key: string]: Project } = {
     images: [
       '/img/projects/eiff-brand-elevation/detail-1.jpg',
       '/img/projects/eiff-brand-elevation/detail-2.jpg',
-      '/img/projects/eiff-brand-elevation/eiff_website.mov',
+      '<iframe width="560" height="315" src="https://www.youtube.com/embed/zVFYeGucm50?si=KQRYX67aWjm0cRGr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
       '/img/projects/eiff-brand-elevation/DESN311_P3_Process_BekaCourtney.pdf'
     ],
     nextProject: {
@@ -62,12 +62,6 @@ const projectsData: { [key: string]: Project } = {
     role: 'UX/UI Designer',
     coverImage: '/img/projects/insight-hr-ux/thumbnail.jpg',
     images: [
-      '/img/projects/insight-hr-ux/final-website-02.jpg',
-      '/img/projects/insight-hr-ux/final-website-03.jpg',
-      '/img/projects/insight-hr-ux/final-website-04.jpg',
-      '/img/projects/insight-hr-ux/final-website-05.jpg',
-      '/img/projects/insight-hr-ux/final-website-06.jpg',
-      '/img/projects/insight-hr-ux/final-website-07.jpg',
       '/img/projects/insight-hr-ux/final-report.pdf',
       'https://youtu.be/zVFYeGucm50?si=dOtUgGEyLkH8L63z'
     ],
@@ -108,10 +102,9 @@ const projectsData: { [key: string]: Project } = {
     coverImage: '/img/projects/fort-edmonton-park/thumbnail.png',
     images: [
       '/img/projects/fort-edmonton-park/thumbnail.png',
-      '/img/projects/fort-edmonton-park/menu-after.jpg',
-      '/img/projects/fort-edmonton-park/social-post-1.jpg',
-      '/img/projects/fort-edmonton-park/social-story-1.jpg',
-      '/img/projects/fort-edmonton-park/pony-card.jpg'
+      '/img/projects/fort-edmonton-park/detail-menu.jpg',
+      '/img/projects/fort-edmonton-park/detail-email-signature.png',
+      '/img/projects/fort-edmonton-park/detail-ponycard.jpg'
     ],
     nextProject: {
       title: 'EIFF Brand Elevation',
@@ -249,13 +242,17 @@ export default function ProjectDetail({
             <div ref={imagesRef} className="project-images space-y-8">
               {project.images.map((image, i) => (
                 <div key={i} className="project-image relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-                  <Image
-                    src={image}
-                    alt={`${project.title} - Image ${i+1}`}
-                    fill
-                    style={{ objectFit: slug === 'eiff-brand-elevation' && image.includes('thumbnail.jpg') ? 'contain' : (slug === 'fort-edmonton-park' ? 'contain' : 'cover') }}
-                    className="transition-transform duration-500 hover:scale-105"
-                  />
+                  {image.startsWith('<iframe') ? (
+                    <div dangerouslySetInnerHTML={{ __html: image }} className="w-full h-full" />
+                  ) : (
+                    <Image
+                      src={image}
+                      alt={`${project.title} - Image ${i+1}`}
+                      fill
+                      style={{ objectFit: slug === 'eiff-brand-elevation' && image.includes('thumbnail.jpg') ? 'contain' : (slug === 'fort-edmonton-park' ? 'contain' : 'cover') }}
+                      className="transition-transform duration-500 hover:scale-105"
+                    />
+                  )}
                 </div>
               ))}
             </div>
