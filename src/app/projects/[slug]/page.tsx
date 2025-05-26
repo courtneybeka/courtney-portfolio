@@ -15,7 +15,7 @@ interface Project {
   id: string;
   title: string;
   description: string;
-  fullDescription: string[];
+  fullDescription: string;
   category: ProjectCategory;
   client: string;
   year: string;
@@ -29,217 +29,70 @@ interface Project {
 }
 
 // Mock project data - in a real app, this would come from a CMS or API
-const projectsData: Record<string, Project> = {
-  'finance-dashboard': {
-    id: '1',
-    title: 'Finance Dashboard UI',
-    description: 'Modern finance dashboard with data visualization and user-friendly interface',
-    fullDescription: [
-      'This project involved designing a comprehensive finance dashboard for a fintech startup, focusing on making complex financial data easily understandable and actionable for users.',
-      'The dashboard needed to display various metrics, transactions, investments, and trends in a clear, organized manner while maintaining a modern aesthetic that aligned with the brand identity.',
-      'I conducted user research with target audiences, created wireframes, and developed high-fidelity prototypes that were tested and refined based on user feedback before finalizing the design.'
-    ],
-    category: 'UX/UI',
-    client: 'FinTech Startup',
-    year: '2022',
-    role: 'Lead UX/UI Designer',
-    coverImage: '/img/projects/finance-dashboard/thumbnail.jpg',
-    images: ['/img/projects/finance-dashboard/thumbnail.jpg', '/img/projects/finance-dashboard/detail-1.jpg', '/img/projects/finance-dashboard/detail-2.jpg'],
-    nextProject: {
-      title: 'Elevate Wellness Brand',
-      slug: '/projects/elevate-wellness'
-    }
-  },
-  'elevate-wellness': {
-    id: '2',
-    title: 'Elevate Wellness Brand',
-    description: 'Brand identity design for a premium wellness company',
-    fullDescription: [
-      'Elevate Wellness approached me to create a cohesive brand identity that would position them as a premium wellness provider in a competitive market.',
-      'The branding needed to convey tranquility, professionalism, and a holistic approach to health, while being versatile enough for various applications across digital and print media.',
-      'I developed a comprehensive brand strategy and visual identity system including logo design, color palette, typography, and brand guidelines that helped establish their unique position in the wellness industry.'
-    ],
-    category: 'Branding',
-    client: 'Elevate Wellness',
-    year: '2022',
-    role: 'Brand Strategist & Designer',
-    coverImage: '/img/projects/elevate-wellness/thumbnail.jpg',
-    images: ['/img/projects/elevate-wellness/thumbnail.jpg', '/img/projects/elevate-wellness/detail-1.jpg', '/img/projects/elevate-wellness/detail-2.jpg'],
-    nextProject: {
-      title: 'E-Commerce Platform',
-      slug: '/projects/ecommerce-redesign'
-    }
-  },
-  'ecommerce-redesign': {
-    id: '3',
-    title: 'E-Commerce Platform',
-    description: 'Complete redesign of an e-commerce website with improved UX',
-    fullDescription: [
-      'This project involved reimagining the online shopping experience for a clothing retailer struggling with cart abandonment and confusing navigation paths.',
-      'I conducted a thorough UX audit, identifying pain points and opportunities to streamline the customer journey from product discovery to checkout.',
-      'The redesign included a more intuitive categorization system, enhanced product filtering, simplified checkout, and responsive designs optimized for all devices, resulting in a 35% increase in conversion rate.'
-    ],
-    category: 'Web Design',
-    client: 'Fashion Retailer',
-    year: '2021',
-    role: 'UX Designer',
-    coverImage: '/img/projects/ecommerce-redesign/thumbnail.jpg',
-    images: ['/img/projects/ecommerce-redesign/thumbnail.jpg', '/img/projects/ecommerce-redesign/detail-1.jpg', '/img/projects/ecommerce-redesign/detail-2.jpg'],
-    nextProject: {
-      title: 'Health Tracking App',
-      slug: '/projects/health-app'
-    }
-  },
-  'health-app': {
-    id: '4',
-    title: 'Health Tracking App',
-    description: 'Mobile app design for tracking fitness and wellness metrics',
-    fullDescription: [
-      'I was tasked with designing a health tracking mobile application that would help users monitor various aspects of their wellness journey in an engaging, intuitive way.',
-      'The app needed to track multiple metrics like activity, nutrition, sleep, and mental wellness while making the data collection process seamless and providing meaningful insights.',
-      'I created a user-centered design with customizable dashboards, achievement systems, and visual data representations that encouraged regular engagement and helped users understand their health patterns.'
-    ],
-    category: 'Mobile Apps',
-    client: 'Health Tech Company',
-    year: '2021',
-    role: 'Mobile UI/UX Designer',
-    coverImage: '/img/projects/health-app/thumbnail.jpg',
-    images: ['/img/projects/health-app/thumbnail.jpg', '/img/projects/health-app/detail-1.jpg', '/img/projects/health-app/detail-2.jpg'],
-    nextProject: {
-      title: 'Creative Agency Rebrand',
-      slug: '/projects/agency-rebrand'
-    }
-  },
-  'agency-rebrand': {
-    id: '5',
-    title: 'Creative Agency Rebrand',
-    description: 'Complete rebrand for a digital creative agency',
-    fullDescription: [
-      'A digital creative agency approached me for a complete rebrand as they were expanding their services and wanted their visual identity to better reflect their evolved positioning.',
-      'The project encompassed developing a new brand strategy, visual identity, messaging framework, and guidelines for implementing the brand across various touchpoints.',
-      'I created a bold, distinctive brand system that communicated their creative expertise while maintaining a professional image that would appeal to their corporate clients.'
-    ],
-    category: 'Branding',
-    client: 'Digital Creative Agency',
-    year: '2020',
-    role: 'Brand Designer',
-    coverImage: '/img/projects/agency-rebrand/thumbnail.jpg',
-    images: ['/img/projects/agency-rebrand/thumbnail.jpg', '/img/projects/agency-rebrand/detail-1.jpg', '/img/projects/agency-rebrand/detail-2.jpg'],
-    nextProject: {
-      title: 'Meditation App UI',
-      slug: '/projects/meditation-app'
-    }
-  },
-  'meditation-app': {
-    id: '6',
-    title: 'Meditation App UI',
-    description: 'Calming and intuitive interface for a meditation app',
-    fullDescription: [
-      'This project involved designing a meditation app interface that would create a sense of calm and ease for users while making meditation practices accessible and engaging.',
-      'The design needed to cater to both beginners and experienced meditators, with features like guided sessions, progress tracking, and customizable experiences.',
-      'I developed a minimalist UI with thoughtful animations, a soothing color palette, and intuitive navigation that helped users focus on their practice without distractions.'
-    ],
-    category: 'UX/UI',
-    client: 'Wellness Tech Startup',
-    year: '2020',
-    role: 'Lead UI Designer',
-    coverImage: '/img/projects/meditation-app/thumbnail.jpg',
-    images: ['/img/projects/meditation-app/thumbnail.jpg', '/img/projects/meditation-app/detail-1.jpg', '/img/projects/meditation-app/detail-2.jpg'],
-    nextProject: {
-      title: 'EIFF Brand Elevation',
-      slug: '/projects/eiff-brand-elevation'
-    }
-  },
+const projectsData: { [key: string]: Project } = {
   'eiff-brand-elevation': {
-    id: '7',
+    id: '1',
     title: 'EIFF Brand Elevation',
     description: 'Complete brand elevation for the Edmonton International Film Festival, including logo redesign, poster, ticket, and website homepage concepts.',
-    fullDescription: [
-      'Tasked with modernizing the brand for the Edmonton International Film Festival (EIFF) to attract a broader audience while honoring its legacy.',
-      'Developed a new dynamic logo, a visually striking poster design, updated ticket layouts, and a concept for a more engaging and user-friendly website homepage.',
-      'The refreshed branding aimed to convey the excitement and diversity of the film festival experience.'
-    ],
+    fullDescription: 'This project involved a comprehensive brand elevation for the Edmonton International Film Festival (EIFF). The goal was to create a cohesive and modern brand identity that would appeal to both film enthusiasts and the general public. The project included designing a new logo, creating promotional posters, designing ticket concepts, and developing a website homepage that reflects the festival\'s new brand identity. The design process focused on creating a balance between artistic expression and practical functionality, ensuring that all elements work together to create a memorable and engaging festival experience.',
     category: 'Branding',
     client: 'Edmonton International Film Festival (Conceptual)',
     year: '2023',
     role: 'Brand Designer & UI/UX Conceptualist',
-    coverImage: '/img/projects/eiff-brand-elevation/detail-2.jpg',
-    images: ['/img/projects/eiff-brand-elevation/thumbnail.jpg', '/img/projects/eiff-brand-elevation/detail-1.jpg', '/img/projects/eiff-brand-elevation/detail-2.jpg'],
-    nextProject: {
-      title: 'HURDE Logo',
-      slug: '/projects/hurde-logo'
-    }
-  },
-  'hurde-logo': {
-    id: '8',
-    title: 'HURDE Logo',
-    description: 'Logo design for MacEwan University\'s Human Rights, Diversity, and Equity (HURDE) club.',
-    fullDescription: [
-      'As the Design Executive for the Human Rights, Diversity, and Equity (HURDE) club at MacEwan University, I was responsible for creating a distinct and meaningful logo.',
-      'The design aimed to represent the core values of the club, emphasizing inclusivity, support, and the diverse voices within the university community dedicated to human rights causes.'
+    coverImage: '/img/projects/eiff-brand-elevation/thumbnail.jpg',
+    images: [
+      '/img/projects/eiff-brand-elevation/detail-1.jpg',
+      '/img/projects/eiff-brand-elevation/detail-2.jpg',
+      '/img/projects/eiff-brand-elevation/eiff_website.mov'
     ],
-    category: 'Branding',
-    client: 'HURDE Club - MacEwan University',
-    year: '2023', // Assuming a recent year, please correct if needed
-    role: 'Design Executive',
-    coverImage: '/img/projects/hurde-logo/hurde.jpg',
-    images: ['/img/projects/hurde-logo/hurde.jpg'], // Only one image for now
     nextProject: {
-      title: 'Insight HR UX/UI Case Study', // Correct: HURDE points to the new Insight HR project
+      title: 'Insight HR UX',
       slug: '/projects/insight-hr-ux'
     }
   },
-  'fort-edmonton-park': {
-    id: '9',
-    title: 'Fort Edmonton Park Design Work',
-    description: 'Diverse graphic design assets for Fort Edmonton Park, including menus, social media, email signatures, and pony cards.',
-    fullDescription: [
-      'Undertook a variety of graphic design tasks for Fort Edmonton Park, a prominent historical attraction.',
-      'Responsibilities included redesigning the Johnson\'s Cafe menu for enhanced readability and visual appeal (showcasing the completed "after" version).',
-      'Developed a series of engaging social media posts for various campaigns and announcements, including content formatted for vertical story displays.',
-      'Created professional email signatures to ensure brand consistency across communications.',
-      'Designed whimsical "pony express" themed pony cards for children visiting the park, adding to the immersive historical experience.'
-    ],
-    category: 'Branding',
-    client: 'Fort Edmonton Park',
-    year: '2022-2023',
-    role: 'Graphic Designer (Contract)',
-    coverImage: '/img/projects/fort-edmonton-park/thumbnail.png',
-    images: [
-      '/img/projects/fort-edmonton-park/thumbnail.png',
-      '/img/projects/fort-edmonton-park/menu-after.jpg',
-      '/img/projects/fort-edmonton-park/social-post-1.jpg',
-      '/img/projects/fort-edmonton-park/social-story-1.jpg',
-      '/img/projects/fort-edmonton-park/pony-card.jpg'
-    ],
-    nextProject: { // Correct: Fort Edmonton Park (previously last) now points to Finance Dashboard
-      title: 'Finance Dashboard UI',
-      slug: '/projects/finance-dashboard'
-    }
-  },
-  'insight-hr-ux': { // New project
-    id: '10',
-    title: 'Insight HR UX/UI Case Study',
-    description: 'A comprehensive UX/UI case study for an HR management platform.',
-    fullDescription: [
-      'This project was a deep dive into creating an intuitive and efficient user experience for an HR management platform, "Insight HR". The goal was to streamline common HR tasks, improve data accessibility, and create a user-friendly interface for HR professionals and employees.',
-      'The process involved extensive user research, including surveys and interviews with HR personnel to understand their pain points and needs. This was followed by creating user personas and journey maps.',
-      'I then developed wireframes and interactive prototypes, focusing on clear navigation, efficient workflows for tasks like onboarding, payroll, and performance reviews, and data visualization for HR analytics. Usability testing was conducted at various stages to refine the design.',
-      'The final deliverables included high-fidelity mockups, a comprehensive style guide, and the detailed UX case study report and video presentation which you can find linked below.'
-    ],
+  'insight-hr-ux': {
+    id: '2',
+    title: 'Insight HR UX',
+    description: 'UX/UI design project for Insight HR, focusing on creating an intuitive and efficient human resources management platform.',
+    fullDescription: 'This UX/UI design project for Insight HR focused on creating a comprehensive human resources management platform. The goal was to design an intuitive and efficient system that would streamline HR processes and improve user experience for both HR professionals and employees. The project involved extensive user research, wireframing, prototyping, and user testing to ensure the final design met user needs and business requirements. The design process emphasized creating a clean, modern interface that would make complex HR tasks more manageable and accessible.',
     category: 'UX/UI',
-    client: 'Conceptual (Course Project)',
+    client: 'Insight HR (Conceptual)',
     year: '2023',
     role: 'UX/UI Designer',
-    coverImage: '/img/projects/insight-hr-ux/placeholder-thumbnail.jpg', // Placeholder
+    coverImage: '/img/projects/insight-hr-ux/thumbnail.jpg',
     images: [
-      '/img/projects/insight-hr-ux/placeholder-detail-1.jpg', // Placeholder
-      '/img/projects/insight-hr-ux/placeholder-detail-2.jpg', // Placeholder
-      '/img/projects/insight-hr-ux/placeholder-detail-3.jpg'  // Placeholder
+      '/img/projects/insight-hr-ux/final-website-02.jpg',
+      '/img/projects/insight-hr-ux/final-website-03.jpg',
+      '/img/projects/insight-hr-ux/final-website-04.jpg',
+      '/img/projects/insight-hr-ux/final-website-05.jpg',
+      '/img/projects/insight-hr-ux/final-website-06.jpg',
+      '/img/projects/insight-hr-ux/final-website-07.jpg',
+      '/img/projects/insight-hr-ux/final-report.pdf',
+      '/img/projects/insight-hr-ux/final-video.mp4'
     ],
     nextProject: {
-      title: 'Finance Dashboard UI', // Correct: New last project Insight HR points to the first project
-      slug: '/projects/finance-dashboard'
+      title: 'Buffalo Lodge',
+      slug: '/projects/buffalo-lodge'
+    }
+  },
+  'buffalo-lodge': {
+    id: '3',
+    title: 'Buffalo Lodge',
+    description: 'Brand identity and visual design for Buffalo Lodge, creating a cohesive and memorable brand experience.',
+    fullDescription: 'The Buffalo Lodge project involved creating a complete brand identity and visual design system. The goal was to develop a distinctive and memorable brand that would resonate with the target audience while maintaining a professional and trustworthy image. The project included logo design, color palette development, typography selection, and the creation of various brand assets. The design process focused on creating a cohesive visual language that could be consistently applied across all touchpoints, from digital platforms to physical materials.',
+    category: 'Branding',
+    client: 'Buffalo Lodge',
+    year: '2023',
+    role: 'Brand Designer',
+    coverImage: '/img/projects/buffalo-lodge/thumbnail.jpg',
+    images: [
+      '/img/projects/buffalo-lodge/detail-1.jpg',
+      '/img/projects/buffalo-lodge/detail-2.jpg',
+      '/img/projects/buffalo-lodge/detail-3.jpg'
+    ],
+    nextProject: {
+      title: 'EIFF Brand Elevation',
+      slug: '/projects/eiff-brand-elevation'
     }
   }
 };
@@ -363,16 +216,10 @@ export default function ProjectDetail({
             variants={staggerContainer}
             className="lg:col-span-2"
           >
-            <div className="mb-12">
-              {project.fullDescription.map((paragraph, i) => (
-                <motion.p 
-                  key={i}
-                  variants={fadeIn}
-                  className="mb-6 text-gray-600 dark:text-gray-300"
-                >
-                  {paragraph}
-                </motion.p>
-              ))}
+            <div className="space-y-6">
+              <p className="text-gray-300 leading-relaxed">
+                {project.fullDescription}
+              </p>
             </div>
             
             {/* Project Images */}

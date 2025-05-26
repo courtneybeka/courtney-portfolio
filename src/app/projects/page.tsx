@@ -26,84 +26,28 @@ export default function Projects() {
   const projects: Project[] = [
     {
       id: '1',
-      title: 'Finance Dashboard UI',
-      description: 'Modern finance dashboard with data visualization and user-friendly interface',
-      category: 'UX/UI',
-      image: '/img/projects/finance-dashboard/thumbnail.jpg',
-      slug: '/projects/finance-dashboard'
-    },
-    {
-      id: '2',
-      title: 'Elevate Wellness Brand',
-      description: 'Brand identity design for a premium wellness company',
-      category: 'Branding',
-      image: '/img/projects/elevate-wellness/thumbnail.jpg',
-      slug: '/projects/elevate-wellness'
-    },
-    {
-      id: '3',
-      title: 'E-Commerce Platform',
-      description: 'Complete redesign of an e-commerce website with improved UX',
-      category: 'Web Design',
-      image: '/img/projects/ecommerce-redesign/thumbnail.jpg',
-      slug: '/projects/ecommerce-redesign'
-    },
-    {
-      id: '4',
-      title: 'Health Tracking App',
-      description: 'Mobile app design for tracking fitness and wellness metrics',
-      category: 'Mobile Apps',
-      image: '/img/projects/health-app/thumbnail.jpg',
-      slug: '/projects/health-app'
-    },
-    {
-      id: '5',
-      title: 'Creative Agency Rebrand',
-      description: 'Complete rebrand for a digital creative agency',
-      category: 'Branding',
-      image: '/img/projects/agency-rebrand/thumbnail.jpg',
-      slug: '/projects/agency-rebrand'
-    },
-    {
-      id: '6',
-      title: 'Meditation App UI',
-      description: 'Calming and intuitive interface for a meditation app',
-      category: 'UX/UI',
-      image: '/img/projects/meditation-app/thumbnail.jpg',
-      slug: '/projects/meditation-app'
-    },
-    {
-      id: '7',
       title: 'EIFF Brand Elevation',
       description: 'Complete brand elevation for the Edmonton International Film Festival, including logo, poster, ticket, and website concepts.',
       category: 'Branding',
-      image: '/img/projects/eiff-brand-elevation/detail-2.jpg',
+      image: '/img/projects/eiff-brand-elevation/thumbnail.jpg',
       slug: '/projects/eiff-brand-elevation'
     },
     {
-      id: '8',
-      title: 'HURDE Logo',
-      description: 'Logo design for MacEwan University\'s Human Rights, Diversity, and Equity (HURDE) club.',
-      category: 'Branding',
-      image: '/img/projects/hurde-logo/hurde.jpg',
-      slug: '/projects/hurde-logo'
-    },
-    {
-      id: '9',
-      title: 'Fort Edmonton Park Design Work',
-      description: 'Diverse graphic design assets for Fort Edmonton Park, including menus, social media, email signatures, and pony cards.',
-      category: 'Branding',
-      image: '/img/projects/fort-edmonton-park/thumbnail.png',
-      slug: '/projects/fort-edmonton-park'
-    },
-    {
-      id: '10',
-      title: 'Insight HR UX/UI Case Study',
-      description: 'A comprehensive UX/UI case study for an HR management platform, including research, wireframing, prototyping, and final designs.',
+      id: '2',
+      title: 'Insight HR UX',
+      description: 'UX/UI design project for Insight HR, focusing on creating an intuitive and efficient human resources management platform.',
       category: 'UX/UI',
-      image: '/img/projects/insight-hr-ux/placeholder-thumbnail.jpg',
+      image: '/img/projects/insight-hr-ux/thumbnail.jpg',
       slug: '/projects/insight-hr-ux'
     },
+    {
+      id: '3',
+      title: 'Buffalo Lodge',
+      description: 'Brand identity and visual design for Buffalo Lodge, creating a cohesive and memorable brand experience.',
+      category: 'Branding',
+      image: '/img/projects/buffalo-lodge/thumbnail.jpg',
+      slug: '/projects/buffalo-lodge'
+    }
   ];
   
   // Filter projects based on active category

@@ -1,0 +1,14 @@
+Anytime you make changes and you like them, just ask the AI to do the following:
+
+"Push and commit all changes to github."
+
+The AI wont be able to add your photos to the images folder itself, but if you look inside the images folder there will be a README.txt that explains what to do.
+Essentially, just drag the photo you want to use from your files to the images folder, and rename it to the corresponding thing. 
+The AI can also help with naming. 
+
+Once you do the "Push and commit all changes to github." using the AI, it should automatically update the website so you don't need to do anything else just wait a few mins for it to update.
+
+
+If you want to just check what it looks like without adding to github, run: npm run dev in terminal (ask ai to do this)
+
+add PonyCards_Page_02 after 01(you have that) then PonyCards_Page_03 PonyCards_Page_04. 
