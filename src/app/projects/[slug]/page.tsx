@@ -43,7 +43,8 @@ const projectsData: { [key: string]: Project } = {
     images: [
       '/img/projects/eiff-brand-elevation/detail-1.jpg',
       '/img/projects/eiff-brand-elevation/detail-2.jpg',
-      '/img/projects/eiff-brand-elevation/eiff_website.mov'
+      '/img/projects/eiff-brand-elevation/eiff_website.mov',
+      'DESN311_P3_Process_BekaCourtney .pdf'
     ],
     nextProject: {
       title: 'Insight HR UX',
