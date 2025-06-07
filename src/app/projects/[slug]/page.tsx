@@ -45,8 +45,7 @@ const projectsData: { [key: string]: Project } = {
       '/img/projects/eiff-brand-elevation/eiff_ticket.jpg',
       '/img/projects/eiff-brand-elevation/detail-1.jpg',
       '/img/projects/eiff-brand-elevation/detail-2.jpg',
-      '<iframe width="560" height="315" src="https://www.youtube.com/embed/zVFYeGucm50?si=KQRYX67aWjm0cRGr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
-      '<iframe src="/img/projects/eiff-brand-elevation/DESN311_P3_Process_BekaCourtney.pdf" width="100%" height="600px" style="border:none;">This browser does not support PDFs. Please download the PDF to view it: <a href="/img/projects/eiff-brand-elevation/DESN311_P3_Process_BekaCourtney.pdf">Download PDF</a>.</iframe>'
+      '<iframe width="560" height="315" src="https://www.youtube.com/embed/zVFYeGucm50?si=KQRYX67aWjm0cRGr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
     ],
     nextProject: {
       title: 'Insight HR UX',
