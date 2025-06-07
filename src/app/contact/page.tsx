@@ -1,21 +1,9 @@
 "use client";
 
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-  
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-  const [submitError, setSubmitError] = useState('');
-  
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -42,52 +30,7 @@ export default function Contact() {
       }
     }
   };
-  
-  // Handle form input changes
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-  
-  // Handle form submission
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate a form submission
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
-      setSubmitSuccess(true);
-      setIsSubmitting(false);
-      
-      // Reset form after successful submission
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-      });
-      
-      // Reset success message after some time
-      setTimeout(() => {
-        setSubmitSuccess(false);
-      }, 5000);
-    }, 1000);
-  };
-  
-  // Handle form error (not used in this example but kept for future use)
-  const handleFormError = (message: string) => {
-    setSubmitError(message);
-    
-    // Clear error after a timeout
-    setTimeout(() => {
-      setSubmitError('');
-    }, 5000);
-  };
-  
+
   return (
     <div className="pt-24 pb-20">
       <div className="container mx-auto px-6">
@@ -113,116 +56,73 @@ export default function Contact() {
             variants={containerVariants}
             className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8"
           >
-            {submitSuccess ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="text-center py-10"
-              >
-                <div className="w-16 h-16 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 13L9 17L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Thank you for reaching out! I'll get back to you as soon as possible.
-                </p>
+            <form action="https://formsubmit.co/courtneybekadesigns@gmail.com" method="POST">
+              <input type="hidden" name="_next" value="https://courtneybekadesigns.com/thank-you" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="text" name="_honey" style={{ display: 'none' }} />
+              
+              <motion.div variants={itemVariants} className="mb-6">
+                <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                  placeholder="Your Name"
+                />
               </motion.div>
-            ) : (
-              <form onSubmit={handleSubmit}>
-                <motion.div variants={itemVariants} className="mb-6">
-                  <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
-                    placeholder="Your Name"
-                  />
-                </motion.div>
-                
-                <motion.div variants={itemVariants} className="mb-6">
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
-                    placeholder="your.email@example.com"
-                  />
-                </motion.div>
-                
-                <motion.div variants={itemVariants} className="mb-6">
-                  <label htmlFor="subject" className="block text-sm font-medium mb-2">Subject</label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
-                  >
-                    <option value="">Select a subject</option>
-                    <option value="Project Inquiry">Project Inquiry</option>
-                    <option value="Collaboration">Collaboration</option>
-                    <option value="Job Opportunity">Job Opportunity</option>
-                    <option value="General Question">General Question</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </motion.div>
-                
-                <motion.div variants={itemVariants} className="mb-6">
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-none dark:bg-gray-700 dark:text-white"
-                    placeholder="Your message here..."
-                  ></textarea>
-                </motion.div>
-                
-                <motion.div variants={itemVariants}>
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-teal-600 hover:bg-teal-700 text-white font-medium py-3 px-6 rounded-xl transition-colors duration-300 flex items-center justify-center"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
-                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                        </svg>
-                        Sending...
-                      </>
-                    ) : (
-                      'Send Message'
-                    )}
-                  </button>
-                </motion.div>
-                
-                {submitError && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="mt-4 text-red-500 text-center"
-                  >
-                    {submitError}
-                  </motion.div>
-                )}
-              </form>
-            )}
+              
+              <motion.div variants={itemVariants} className="mb-6">
+                <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                  placeholder="your.email@example.com"
+                />
+              </motion.div>
+              
+              <motion.div variants={itemVariants} className="mb-6">
+                <label htmlFor="subject" className="block text-sm font-medium mb-2">Subject</label>
+                <select
+                  id="subject"
+                  name="subject"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                >
+                  <option value="">Select a subject</option>
+                  <option value="Project Inquiry">Project Inquiry</option>
+                  <option value="Collaboration">Collaboration</option>
+                  <option value="Job Opportunity">Job Opportunity</option>
+                  <option value="General Question">General Question</option>
+                  <option value="Other">Other</option>
+                </select>
+              </motion.div>
+              
+              <motion.div variants={itemVariants} className="mb-6">
+                <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows={6}
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-none dark:bg-gray-700 dark:text-white"
+                  placeholder="Your message here..."
+                ></textarea>
+              </motion.div>
+              
+              <motion.div variants={itemVariants}>
+                <button
+                  type="submit"
+                  className="w-full bg-teal-600 hover:bg-teal-700 text-white font-medium py-3 px-6 rounded-xl transition-colors duration-300 flex items-center justify-center"
+                >
+                  Send Message
+                </button>
+              </motion.div>
+            </form>
           </motion.div>
           
           {/* Contact Information */}

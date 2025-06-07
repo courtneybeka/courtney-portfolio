@@ -12,3 +12,4 @@ Once you do the "Push and commit all changes to github." using the AI, it should
 If you want to just check what it looks like without adding to github, run: npm run dev in terminal (ask ai to do this)
 
 add PonyCards_Page_02 after 01(you have that) then PonyCards_Page_03 PonyCards_Page_04. 
+
