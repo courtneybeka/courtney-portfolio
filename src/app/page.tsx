@@ -4,8 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { getFeaturedProjects } from "@/data/projects";
 
 export default function Home() {
+  // Get the 3 most recent projects for featured section
+  const featuredProjects = getFeaturedProjects(3);
+
   // Animation variants
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
@@ -38,28 +42,6 @@ export default function Home() {
     triggerOnce: true,
     threshold: 0.1
   });
-
-  // Featured projects data
-  const featuredProjects = [
-    {
-      title: "Brand Identity: Elevate Wellness",
-      category: "Branding",
-      image: "/img/projects/elevate-wellness/thumbnail.jpg",
-      slug: "/projects/elevate-wellness"
-    },
-    {
-      title: "UX/UI: Finance Dashboard",
-      category: "UX/UI Design",
-      image: "/img/projects/finance-dashboard/thumbnail.jpg", 
-      slug: "/projects/finance-dashboard"
-    },
-    {
-      title: "E-Commerce Redesign",
-      category: "Web Design",
-      image: "/img/projects/ecommerce-redesign/thumbnail.jpg",
-      slug: "/projects/ecommerce-redesign"
-    }
-  ];
 
   return (
     <>
@@ -165,7 +147,7 @@ export default function Home() {
           >
             {featuredProjects.map((project, index) => (
               <motion.div
-                key={index}
+                key={project.id}
                 variants={fadeInUp}
                 className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2"
               >
@@ -184,6 +166,9 @@ export default function Home() {
                       {project.category}
                     </span>
                     <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                    <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">
+                      {project.description}
+                    </p>
                     <div className="flex items-center text-gray-500 dark:text-gray-400">
                       <span>View Project</span>
                       <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -202,31 +187,59 @@ export default function Home() {
             animate={projectsInView ? "visible" : "hidden"}
             className="text-center mt-12"
           >
-            <Link href="/projects" className="bg-transparent border border-gray-300 hover:border-purple-500 hover:text-purple-600 px-8 py-3 rounded-full font-medium transition-colors duration-300">
+            <Link href="/projects" className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full font-medium transition-colors duration-300">
               View All Projects
             </Link>
           </motion.div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-purple-600 text-white">
-        <div className="container mx-auto px-6 text-center">
+      {/* Skills/Services */}
+      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+        <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="max-w-3xl mx-auto"
+            className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to start your next project?</h2>
-            <p className="text-xl mb-8 text-purple-100">
-              Let's collaborate and bring your vision to life with creative design solutions.
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">What I Do</h2>
+            <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
+              I specialize in creating cohesive brand experiences and intuitive digital interfaces.
             </p>
-            <Link href="/contact" className="bg-white text-purple-600 hover:bg-purple-100 px-8 py-3 rounded-full font-medium transition-colors duration-300 inline-block">
-              Get in Touch
-            </Link>
           </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "UX/UI Design",
+                description: "Creating user-centered designs that balance aesthetics with functionality.",
+                icon: "🎨"
+              },
+              {
+                title: "Brand Strategy",
+                description: "Developing comprehensive brand identities that resonate with target audiences.",
+                icon: "🎯"
+              },
+              {
+                title: "Visual Design",
+                description: "Crafting visually compelling graphics and marketing materials.",
+                icon: "✨"
+              }
+            ].map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg text-center"
+              >
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-bold mb-4">{service.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300">{service.description}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
     </>
