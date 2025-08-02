@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Briefcase, GraduationCap, Users, Award, Sparkles, CheckCircle } from 'lucide-react'; // Example icons
@@ -51,6 +52,17 @@ export default function About() {
             variants={staggerContainer}
             className="text-center max-w-3xl mx-auto"
           >
+            <motion.div variants={fadeInUp} className="mb-8">
+              <div className="relative w-48 h-48 mx-auto mb-6">
+                <Image
+                  src="/images/ProfilePic.jpeg"
+                  alt="Courtney Beka - UX/UI Designer & Brand Strategist"
+                  fill
+                  className="rounded-full object-cover shadow-lg"
+                  priority
+                />
+              </div>
+            </motion.div>
             <motion.h1 variants={fadeInUp} className="text-4xl md:text-5xl font-bold mb-6">
               Courtney Beka
             </motion.h1>

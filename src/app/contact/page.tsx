@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useRouter } from 'next/navigation';
@@ -233,6 +234,26 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:mt-10"
           >
+            {/* Profile Picture */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mb-8 text-center"
+            >
+              <div className="relative w-32 h-32 mx-auto mb-4">
+                <Image
+                  src="/images/ProfilePic.jpeg"
+                  alt="Courtney Beka - UX/UI Designer & Brand Strategist"
+                  fill
+                  className="rounded-full object-cover shadow-lg"
+                  priority
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Courtney Beka</h3>
+              <p className="text-gray-600 dark:text-gray-300">UX/UI Designer & Brand Strategist</p>
+            </motion.div>
+            
             <div className="mb-10">
               <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
               <p className="text-gray-600 dark:text-gray-300 mb-8">

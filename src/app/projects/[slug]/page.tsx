@@ -7,11 +7,12 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { notFound } from 'next/navigation';
 import gsap from 'gsap';
+import { projectsData } from '@/data/project-details'; // Import the new data
 
 // Project types
 type ProjectCategory = 'UX/UI' | 'Branding' | 'Web Design' | 'Mobile Apps';
 
-interface Project {
+export interface Project {
   id: string;
   title: string;
   description: string;
@@ -20,104 +21,12 @@ interface Project {
   client: string;
   year: string;
   role: string;
-  coverImage: string;
   images: string[];
   nextProject: {
     title: string;
     slug: string;
   };
 }
-
-// Mock project data - in a real app, this would come from a CMS or API
-const projectsData: { [key: string]: Project } = {
-  'eiff-brand-elevation': {
-    id: '1',
-    title: 'EIFF Brand Elevation',
-    description: 'Complete brand elevation for the Edmonton International Film Festival, including logo redesign, poster, ticket, and website homepage concepts.',
-    fullDescription: 'This project involved a comprehensive brand elevation for the Edmonton International Film Festival (EIFF). The goal was to create a cohesive and modern brand identity that would appeal to both film enthusiasts and the general public. The project included designing a new logo, creating promotional posters, designing ticket concepts, and developing a website homepage that reflects the festival\'s new brand identity. The design process focused on creating a balance between artistic expression and practical functionality, ensuring that all elements work together to create a memorable and engaging festival experience.',
-    category: 'Branding',
-    client: 'Edmonton International Film Festival (Conceptual)',
-    year: '2023',
-    role: 'Brand Designer & UI/UX Conceptualist',
-    coverImage: '/img/projects/eiff-brand-elevation/eiff_logo.jpg',
-    images: [
-      '/img/projects/eiff-brand-elevation/eiff_logo.jpg',
-      '/img/projects/eiff-brand-elevation/eiff_ticket.jpg',
-      '/img/projects/eiff-brand-elevation/detail-1.jpg',
-      '/img/projects/eiff-brand-elevation/detail-2.jpg',
-      '<iframe width="560" height="315" src="https://www.youtube.com/embed/zVFYeGucm50?si=KQRYX67aWjm0cRGr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
-    ],
-    nextProject: {
-      title: 'Insight HR UX',
-      slug: '/projects/insight-hr-ux'
-    }
-  },
-  'insight-hr-ux': {
-    id: '2',
-    title: 'Insight HR UX',
-    description: 'UX/UI design project for Insight HR, focusing on creating an intuitive and efficient human resources management platform.',
-    fullDescription: 'This UX/UI design project for Insight HR focused on creating a comprehensive human resources management platform. The goal was to design an intuitive and efficient system that would streamline HR processes and improve user experience for both HR professionals and employees. The project involved extensive user research, wireframing, prototyping, and user testing to ensure the final design met user needs and business requirements. The design process emphasized creating a clean, modern interface that would make complex HR tasks more manageable and accessible.',
-    category: 'UX/UI',
-    client: 'Insight HR (Conceptual)',
-    year: '2023',
-    role: 'UX/UI Designer',
-    coverImage: '/img/projects/insight-hr-ux/InsightHr1.png',
-    images: [
-      '/img/projects/insight-hr-ux/InsightHr1.png',
-      '/img/projects/insight-hr-ux/InsightHr2.png',
-      '/img/projects/insight-hr-ux/InsightHr3.png',
-      '/img/projects/insight-hr-ux/InsightHr4.png',
-      '/img/projects/insight-hr-ux/InsightHr5.png',
-      '/img/projects/insight-hr-ux/InsightHr6.png',
-      '<iframe width="560" height="315" src="https://www.youtube.com/embed/ZIX_-B2-Tdc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
-    ],
-    nextProject: {
-      title: 'Buffalo Lodge',
-      slug: '/projects/buffalo-lodge'
-    }
-  },
-  'buffalo-lodge': {
-    id: '3',
-    title: 'Buffalo Lodge',
-    description: 'Brand identity and visual design for Buffalo Lodge, creating a cohesive and memorable brand experience.',
-    fullDescription: 'The Buffalo Lodge project involved creating a complete brand identity and visual design system. The goal was to develop a distinctive and memorable brand that would resonate with the target audience while maintaining a professional and trustworthy image. The project included logo design, color palette development, typography selection, and the creation of various brand assets. The design process focused on creating a cohesive visual language that could be consistently applied across all touchpoints, from digital platforms to physical materials.',
-    category: 'Branding',
-    client: 'Buffalo Lodge',
-    year: '2023',
-    role: 'Brand Designer',
-    coverImage: '/img/projects/buffalo-lodge/thumbnail.jpg',
-    images: [
-      '/img/projects/buffalo-lodge/detail-1.jpg',
-      '/img/projects/buffalo-lodge/detail-2.jpg',
-      '/img/projects/buffalo-lodge/detail-3.jpg'
-    ],
-    nextProject: {
-      title: 'Fort Edmonton Park',
-      slug: '/projects/fort-edmonton-park'
-    }
-  },
-  'fort-edmonton-park': {
-    id: '4',
-    title: 'Fort Edmonton Park',
-    description: 'Diverse graphic design assets for Fort Edmonton Park, including menus, social media, email signatures, and pony cards.',
-    fullDescription: 'Undertook a variety of graphic design tasks for Fort Edmonton Park, a prominent historical attraction. Responsibilities included redesigning the Johnson\'s Cafe menu for enhanced readability and visual appeal, developing engaging social media posts for various campaigns and announcements, creating professional email signatures to ensure brand consistency across communications, and designing whimsical "pony express" themed pony cards for children visiting the park, adding to the immersive historical experience.',
-    category: 'Branding',
-    client: 'Fort Edmonton Park',
-    year: '2022-2023',
-    role: 'Graphic Designer (Contract)',
-    coverImage: '/img/projects/fort-edmonton-park/thumbnail.png',
-    images: [
-      '/img/projects/fort-edmonton-park/thumbnail.png',
-      '/img/projects/fort-edmonton-park/detail-menu.jpg',
-      '/img/projects/fort-edmonton-park/detail-email-signature.png',
-      '/img/projects/fort-edmonton-park/detail-ponycard.jpg'
-    ],
-    nextProject: {
-      title: 'EIFF Brand Elevation',
-      slug: '/projects/eiff-brand-elevation'
-    }
-  }
-};
 
 export default function ProjectDetail({
   params,
@@ -178,6 +87,23 @@ export default function ProjectDetail({
     }
   };
   
+  // Get project theme color
+  const getProjectColor = (projectSlug: string) => {
+    const colorMap: { [key: string]: string } = {
+      'alberta-parks-app': 'bg-green-600',
+      'shadows-sanatorium': 'bg-purple-800',
+      'edmonton-311-app': 'bg-blue-600',
+      'eiff-brand-elevation': 'bg-red-600',
+      'buffalo-lodge': 'bg-amber-600',
+      'to-learn-english': 'bg-indigo-600',
+      'fort-edmonton-park': 'bg-orange-600',
+      'insight-hr-refresh': 'bg-teal-600',
+      'health-app': 'bg-pink-500',
+      'hurde-logo': 'bg-gray-700'
+    };
+    return colorMap[projectSlug] || 'bg-gray-600';
+  };
+  
   // Intersection observer for animations
   const [headerRef, headerInView] = useInView({
     triggerOnce: true,
@@ -194,20 +120,9 @@ export default function ProjectDetail({
       {/* Project Header */}
       <section 
         ref={headerRef}
-        className="relative h-[50vh] md:h-[70vh] overflow-hidden mb-16"
+        className={`relative h-[50vh] md:h-[70vh] overflow-hidden mb-16 ${getProjectColor(slug)}`}
       >
-        <div className="absolute inset-0">
-          <Image
-            src={project.coverImage}
-            alt={project.title}
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-            className="brightness-[0.7]"
-          />
-        </div>
-        
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-black/20 to-black/40"></div>
         
         <motion.div 
           initial="hidden"
@@ -215,13 +130,13 @@ export default function ProjectDetail({
           variants={staggerContainer}
           className="relative z-10 container mx-auto px-6 flex flex-col justify-center h-full text-white"
         >
-          <motion.div variants={fadeIn} className="text-teal-300 font-medium mb-2">
+          <motion.div variants={fadeIn} className="text-white/80 font-medium mb-2">
             {project.category}
           </motion.div>
           <motion.h1 variants={fadeIn} className="text-4xl md:text-6xl font-bold mb-4 max-w-3xl">
             {project.title}
           </motion.h1>
-          <motion.p variants={fadeIn} className="text-xl max-w-2xl">
+          <motion.p variants={fadeIn} className="text-xl max-w-2xl text-white/90">
             {project.description}
           </motion.p>
         </motion.div>
@@ -245,19 +160,44 @@ export default function ProjectDetail({
             </div>
             
             {/* Project Images */}
-            <div ref={imagesRef} className={`project-images ${slug === 'insight-hr-ux' ? 'flex flex-wrap gap-4' : 'space-y-8'}`}>
+            <div ref={imagesRef} className="project-images space-y-8 mt-12">
               {project.images.map((image, i) => (
-                <div key={i} className={slug === 'insight-hr-ux' ? 'relative w-80 aspect-[16/10] rounded-xl overflow-hidden shadow-lg' : 'project-image relative w-full aspect-video rounded-xl overflow-hidden shadow-lg'}>
-                  {image.startsWith('<iframe') ? (
-                    <div dangerouslySetInnerHTML={{ __html: image }} className="w-full h-full" />
+                <div key={i}>
+                  {image.startsWith('<') ? (
+                    // Render HTML content (divs, iframes, etc.)
+                    <div dangerouslySetInnerHTML={{ __html: image }} className="w-full" />
                   ) : (
-                    <Image
+                    // Render image in simple container with fullscreen option
+                    <div className="project-image-container relative w-full h-auto rounded-xl shadow-lg bg-gray-100 dark:bg-gray-800 overflow-hidden">
+                      <img
                       src={image}
                       alt={`${project.title} - Image ${i+1}`}
-                      fill
-                      style={{ objectFit: slug === 'eiff-brand-elevation' && image.includes('eiff_logo.jpg') ? 'contain' : (slug === 'fort-edmonton-park' ? 'contain' : 'cover') }}
-                      className="transition-transform duration-500 hover:scale-105"
-                    />
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      {/* Fullscreen button */}
+                      <button
+                        onClick={() => {
+                          const modal = document.createElement('div');
+                          modal.className = 'fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4';
+                          modal.onclick = () => modal.remove();
+                          
+                          const img = document.createElement('img');
+                          img.src = image;
+                          img.className = 'max-w-full max-h-full object-contain';
+                          img.alt = `${project.title} - Image ${i+1}`;
+                          
+                          modal.appendChild(img);
+                          document.body.appendChild(modal);
+                        }}
+                        className="absolute top-4 right-4 bg-white bg-opacity-80 hover:bg-opacity-100 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-800 dark:text-white rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110"
+                        title="Open in fullscreen"
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path>
+                        </svg>
+                      </button>
+                    </div>
                   )}
                 </div>
               ))}
