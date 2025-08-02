@@ -9,8 +9,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function ProjectDetail({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export default async function ProjectDetail({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const project = projectsData[slug];
 
   if (!project) {

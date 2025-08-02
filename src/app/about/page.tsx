@@ -67,10 +67,12 @@ export default function About() {
               Courtney Beka
             </motion.h1>
             <motion.p variants={fadeInUp} className="text-xl mb-6 text-gray-700 dark:text-gray-300">
-              UX/UI Designer & Brand Strategist crafting intuitive and engaging digital experiences.
+              Designer who thinks good design should make life easier, not harder.
             </motion.p>
             <motion.p variants={fadeInUp} className="mb-8 text-gray-600 dark:text-gray-400">
-              Driven by a passion for user-centered design and creative problem-solving, I specialize in transforming complex challenges into elegant, accessible solutions. My approach combines strategic thinking with a keen eye for detail, ensuring every design is not only visually compelling but also highly functional and aligned with user needs and business goals.
+              You know that feeling when you're trying to use an app and it just doesn't make sense? That's what got me into design. 
+              <br /><br />
+              I spent four years at MacEwan University figuring out how to make digital stuff less frustrating. Now I work with businesses to create experiences that people genuinely enjoy using instead of tolerating.
             </motion.p>
             <motion.p variants={fadeInUp} className="mb-8">
               <a href="mailto:courtneybekadesigns@gmail.com" className="text-purple-600 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300 font-medium transition-colors duration-300">
@@ -99,7 +101,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className={sectionHeadingStyle}
           >
-            Core Competencies
+            What I'm Actually Good At
           </motion.h2>
           <motion.div 
             variants={staggerContainer}
@@ -109,51 +111,51 @@ export default function About() {
           >
             <motion.div variants={fadeInUp} className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg">
               <Sparkles className={iconStyle} />
-              <h3 className={subHeadingStyle}>Technical Proficiency</h3>
+              <h3 className={subHeadingStyle}>The Tools I Know</h3>
               <ul className="space-y-2">
-                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Proficient in Figma, Adobe Creative Suite (Illustrator, XD, InDesign, Photoshop).</li>
-                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Productivity tools including Microsoft Office and Google Drive.</li>
-                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Skilled in creating responsive layouts, static prototypes.</li>
-                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Accessible digital assets for web and mobile platforms.</li>
+                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />I can make magic happen in Figma and Adobe Creative Suite. Yes, I've survived my share of Photoshop crashes.</li>
+                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Pretty comfortable with all the usual suspects like Microsoft Office and Google Drive.</li>
+                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />I build prototypes that actually work and look good on your phone.</li>
+                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Big on making things accessible—everyone deserves good design.</li>
               </ul>
             </motion.div>
 
             <motion.div variants={fadeInUp} className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg">
               <CheckCircle className={iconStyle} />
-              <h3 className={subHeadingStyle}>User-Centered & Accessible Design</h3>
+              <h3 className={subHeadingStyle}>Making Things Work Better</h3>
               <ul className="space-y-2">
-                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Strong understanding of UI/UX principles, content audits.</li>
-                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Information architecture improvements.</li>
-                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Successfully redesigned the Insight HR website (details in projects).</li>
+                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />I know how to make websites that don't confuse people. Revolutionary, I know.</li>
+                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Good at organizing messy information so it makes sense.</li>
+                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Took a confusing HR website and made it usable. You can see it in my projects.</li>
               </ul>
             </motion.div>
 
             <motion.div variants={fadeInUp} className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg">
               <Award className={iconStyle} />
-              <h3 className={subHeadingStyle}>Visual & Interactive Design Excellence</h3>
+              <h3 className={subHeadingStyle}>Making Things Look Good</h3>
               <ul className="space-y-2">
-                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Proven ability to deliver high-fidelity mockups and cohesive design systems.</li>
-                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Expertise across branding, web, and campaign materials.</li>
-                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Designed immersive interfaces for "Shadows of the Sanitorium".</li>
+                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />I can take a rough idea and turn it into something polished that all fits together.</li>
+                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Whether it's a logo, website, or marketing campaign—I've probably designed something like it.</li>
+                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Designed a pretty cool horror game interface (yes, that's a real thing in my portfolio).</li>
               </ul>
             </motion.div>
 
             <motion.div variants={fadeInUp} className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg">
               <Users className={iconStyle} />
-              <h3 className={subHeadingStyle}>Agile & Collaborative Workflow</h3>
+              <h3 className={subHeadingStyle}>Working With People</h3>
               <ul className="space-y-2">
-                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Experienced in Agile design processes (research, prototyping, testing, refinement).</li>
-                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Collaborated with stakeholders, content teams, and non-design leads.</li>
-                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Align visual communication with user needs and organizational goals.</li>
+                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />I know how to test ideas fast, get feedback, and make things better without taking it personally.</li>
+                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Good at translating between design speak and normal human language.</li>
+                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />I make sure what looks good also makes business sense.</li>
               </ul>
             </motion.div>
              <motion.div variants={fadeInUp} className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg md:col-span-2 lg:col-span-2">
                <Briefcase className={iconStyle} />
-              <h3 className={subHeadingStyle}>Project Coordination & Communication</h3>
+              <h3 className={subHeadingStyle}>Getting Stuff Done</h3>
               <ul className="space-y-2">
-                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Comfortable presenting concepts and solutions to diverse stakeholders.</li>
-                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Experienced in managing timelines, drafting RFPs.</li>
-                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Ensuring clear communication between design and development.</li>
+                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />I can explain design decisions to anyone, from CEOs to developers, and make it interesting.</li>
+                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />Pretty good at juggling deadlines without losing my mind.</li>
+                <li className={listItemStyle}><CheckCircle className={listItemIconStyle} />I speak both designer and developer, so nothing gets lost in translation.</li>
               </ul>
             </motion.div>
           </motion.div>
@@ -361,9 +363,9 @@ export default function About() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="text-3xl font-bold mb-6">Interested in working together?</h2>
+            <h2 className="text-3xl font-bold mb-6">Want to work together?</h2>
             <p className="text-xl mb-8 text-purple-100">
-              Let's create something amazing. Feel free to reach out!
+              I'm always up for a good design challenge. Let's chat about your project!
             </p>
             <Link href="/contact" className="bg-white text-purple-600 hover:bg-purple-100 px-8 py-3 rounded-full font-medium transition-colors duration-300 inline-block">
               Get in Touch

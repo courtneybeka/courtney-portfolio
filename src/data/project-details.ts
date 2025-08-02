@@ -1,5 +1,5 @@
 
-import { Project as ProjectDetail } from '@/app/projects/[slug]/page';
+import { Project as ProjectDetail } from '@/app/projects/[slug]/ProjectClient';
 export const projectsData: { [key: string]: ProjectDetail } = {
   'alberta-parks-app': {
     id: '1',

@@ -69,13 +69,13 @@ export default function Home() {
               variants={fadeInUp}
               className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight"
             >
-              Crafting <span className="text-purple-500">Digital</span> Experiences That Inspire
+              Hey! I'm Courtney, and I design <span className="text-purple-500">digital experiences</span> people love using
             </motion.h1>
             <motion.p 
               variants={fadeInUp}
               className="text-xl md:text-2xl mb-8 text-gray-600 dark:text-gray-300"
             >
-              UX/UI Designer & Brand Strategist bringing vibrant, creative solutions to life.
+              I'm a designer who gets excited about solving problems through design. Whether it's making an app easier to navigate or helping a brand tell their story better.
             </motion.p>
             <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
               <Link href="/projects" className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full font-medium transition-colors duration-300">
@@ -104,12 +104,12 @@ export default function Home() {
             className="grid grid-cols-1 gap-12 justify-items-center"
           >
             <motion.div variants={fadeInUp} className="max-w-2xl text-center md:text-left">
-              <h2 className="text-3xl font-bold mb-6">Hi, I'm Courtney!</h2>
+              <h2 className="text-3xl font-bold mb-6">Here's what I do</h2>
               <p className="text-xl mb-6 text-gray-600 dark:text-gray-300">
-                I'm a UX/UI designer and brand strategist with a passion for creating aesthetic, user-friendly digital experiences.
+                I studied design at MacEwan University for four years. Every project I work on teaches me something new.
               </p>
               <p className="mb-8 text-gray-600 dark:text-gray-300">
-                My approach combines creativity with strategic thinking to deliver designs that are not only visually captivating but also functional and intuitive.
+                I solve problems through design. I take complex ideas and make them simple. I help businesses create digital experiences that people genuinely want to use.
               </p>
               <Link href="/about" className="text-purple-600 font-medium hover:text-purple-800 transition-colors duration-300 flex items-center justify-center md:justify-start">
                 More About Me
@@ -132,10 +132,10 @@ export default function Home() {
             className="text-center mb-16"
           >
             <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-bold mb-4">
-              Featured Projects
+              Some stuff I've made
             </motion.h2>
             <motion.p variants={fadeInUp} className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
-              Take a look at some of my recent work and the creative solutions I've designed for various clients.
+              Here's a peek at some projects I'm actually proud of. Each one taught me something new (and yes, there were plenty of late nights involved).
             </motion.p>
           </motion.div>
 
@@ -203,9 +203,9 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">What I Do</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">What I'm good at</h2>
             <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
-              I specialize in creating cohesive brand experiences and intuitive digital interfaces.
+              After a few years of making mistakes (and fixing them), here's what I've gotten pretty good at.
             </p>
           </motion.div>
           
@@ -213,17 +213,17 @@ export default function Home() {
             {[
               {
                 title: "UX/UI Design",
-                description: "Creating user-centered designs that balance aesthetics with functionality.",
+                description: "Creating apps and websites that feel intuitive and enjoyable to use.",
                 icon: "🎨"
               },
               {
                 title: "Brand Strategy",
-                description: "Developing comprehensive brand identities that resonate with target audiences.",
+                description: "Helping brands figure out who they are and how to show it (without being boring).",
                 icon: "🎯"
               },
               {
                 title: "Visual Design",
-                description: "Crafting visually compelling graphics and marketing materials.",
+                description: "Creating graphics that catch your eye and actually serve a purpose.",
                 icon: "✨"
               }
             ].map((service, index) => (
